@@ -1,4 +1,13 @@
 def binary_search(list, item):
+    """The binary search algorith
+
+    Arguments:
+        list {list} -- sorted list to be searched
+        item {int} -- item to be searched
+
+    Returns:
+        int | None -- the index if found or None if not
+    """
     start = 0
     end = len(list) - 1
 
