@@ -1,5 +1,5 @@
 def binary_search(list, item):
-    """The binary search algorith
+    """The binary search algorithm
 
     Arguments:
         list {list} -- sorted list to be searched
@@ -13,7 +13,6 @@ def binary_search(list, item):
 
     while start <= end:
         midpoint = (start + end) // 2
-        # print(midpoint)
 
         if list[midpoint] == item:
             return midpoint
