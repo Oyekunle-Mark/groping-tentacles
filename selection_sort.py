@@ -37,3 +37,4 @@ def selection_sort(arr):
 
 
 print(selection_sort([5, 3, 6, 2, 10]))
+print(selection_sort([12, 3, 232, 32, -3, 0, 23, -2, 2]))
