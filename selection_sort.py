@@ -1,4 +1,12 @@
 def find_index_of_minimum(arr):
+    """Returns the index of the minimum number
+
+    Arguments:
+        arr {list} -- the input list
+
+    Returns:
+        int -- the index of the minimum number
+    """
     minimum = arr[0]
     index_of_minimum = 0
 
@@ -11,6 +19,14 @@ def find_index_of_minimum(arr):
 
 
 def selection_sort(arr):
+    """The selection sort algorithm
+
+    Arguments:
+        arr {list} -- the input list
+
+    Returns:
+        list -- the sorted list
+    """
     sorted_arr = []
 
     for _ in range(len(arr)):
