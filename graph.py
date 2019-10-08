@@ -17,10 +17,26 @@ pp(graph)
 
 
 def is_jonny(person):
+    """Returns true if person is the string jonny
+
+    Arguments:
+        person {str} -- the string to be compared
+
+    Returns:
+        bool -- the result of comparison
+    """
     return person == "jonny"
 
 
 def search(name):
+    """Used the breadth-first-search algorithm to find the minimum possible path to a node
+
+    Arguments:
+        name {str} -- the node to start the search from
+
+    Returns:
+        bool -- True if found and false otherwise
+    """
     search_queue = deque()
     search_queue += graph[name]
 
@@ -36,6 +52,7 @@ def search(name):
                 print(f"{current_person} found!")
                 return True
             else:
+                # add the neighbouring nodes of the current_person to the queue
                 search_queue += graph[current_person]
 
                 # mark current_person as searched
