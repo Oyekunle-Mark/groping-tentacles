@@ -28,25 +28,37 @@ parents["b"] = "start"
 parents["fin"] = None
 
 
-def find_lowest_cost_node(costs):
-    lowest_cost = float("inf")
-    lowest_cost_node = None
-
-    for node in costs:
-        cost = costs[node]
-
-        if cost < lowest_cost and node not in processed:
-            lowest_cost = cost
-            lowest_cost_node = node
-
-    return lowest_cost_node
-
-
 def dijkstra(costs):
-    node = find_lowest_cost_node(costs)
+    """Implementation of the Dijkstra algorithm
 
+    Arguments:
+        costs {dict} -- costs of the nodes
+    """
     # to check if a node has been processed
     processed = []
+
+    def find_lowest_cost_node(costs):
+        """Find the node with the lowest cost
+
+        Arguments:
+        costs {dict} -- costs of the nodes
+
+        Returns:
+            dict -- the lowest cost node
+        """
+        lowest_cost = float("inf")
+        lowest_cost_node = None
+
+        for node in costs:
+            cost = costs[node]
+
+            if cost < lowest_cost and node not in processed:
+                lowest_cost = cost
+                lowest_cost_node = node
+
+        return lowest_cost_node
+
+    node = find_lowest_cost_node(costs)
 
     while node is not None:
         cost = costs[node]
