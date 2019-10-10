@@ -73,3 +73,9 @@ def dijkstra(costs):
 
         processed.append(node)
         node = find_lowest_cost_node(costs)
+
+
+# find the shortest possible path to the finish
+dijkstra(costs)
+# print the costs to views to view the
+pp(costs)
